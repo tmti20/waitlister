@@ -1,9 +1,9 @@
-<style type="text/css">
+/*<style type= "text/css">*/
 	  #dis {display: none;}
    
     body { 
     background-color: #e2e2e2;
-    background-image: url("bg.jpg");
+    //background-image: url("bg.jpg");
     background-repeat: no-repeat;
     background-position: left bottom;
     background-attachment: fixed;
@@ -98,4 +98,4 @@
     
   span {display: none;}  
        
-</style>
+/*</style>*/

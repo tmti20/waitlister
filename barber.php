@@ -1,4 +1,6 @@
 <?php
+include ( "connectDB.php") ;
+include ("header.php");
 //MENU.PHP
 $store = "Up & Up";
 $barbername = "Sean";
@@ -9,7 +11,7 @@ $q = "select queuenumber from wt_queue where barbername = '$barbername'";
 
 $star = "";
 //MENU
-echo "<select  name=\"store\">";
+echo "<select id='textarea'  name=\"store\">";
 //OPTIONS
 while (($r = mysqli_fetch_array($t,MYSQLI_ASSOC)) || ($o = mysqli_fetch_array($t2,MYSQLI_ASSOC)) ) {
     $barber = $r["barbername"];
@@ -18,7 +20,7 @@ while (($r = mysqli_fetch_array($t,MYSQLI_ASSOC)) || ($o = mysqli_fetch_array($t
     include ("rating.php");
     echo "<option value = \"$barber\">";
     echo  "$barber | Rating: $star <br>";
-    echo  "<br>| Queue : $queuenumber";
+    //echo  "<br>| Queue : $queuenumber";
     echo "</option>";
 }
 
