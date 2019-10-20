@@ -34,7 +34,7 @@
         <div class="wrap-login100">
             <form class="login100-form validate-form">
 					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
+						<i class="zmdi zmdi-landscapes">WL</i>
 					</span>
 
                 <div class="container-login100-form-btn">
