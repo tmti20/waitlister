@@ -1,14 +1,14 @@
-<!----------------------- Header HTML code here ----------------------->
 <?php include("header.php"); ?>
-<span class="login100-form-title p-b-34 p-t-27">
-    Chose a Barber
-</span>
+    <span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
 
-<!------------------- php code starts here ------------------->
+    <div class="container-login100-form-btn">
+
+
 <?php
 
-include("DB/connectDB.php");
-//include ("header.php");
+include("connectDB.php");
 
 //MENU.PHP
 $store = "Up & Up";
@@ -26,7 +26,7 @@ while (($r = mysqli_fetch_array($t,MYSQLI_ASSOC)) || ($o = mysqli_fetch_array($t
     $barber = $r["barbername"];
     $rating = $r["rating"];
     $queuenumber = $o["queuenumber"];
-    include ("rating.php");
+    include("rating.php");
     echo "<option value = \"$barber\">";
     echo  "$barber | Rating: $star <br>";
     //echo  "<br>| Queue : $queuenumber";
@@ -36,9 +36,8 @@ while (($r = mysqli_fetch_array($t,MYSQLI_ASSOC)) || ($o = mysqli_fetch_array($t
 
 //End Option Wrapper
 echo "</select>";
+//End Menu Wrapper
 
 ?>
-<!------------------- php code End here ------------------->
-
-<!----------------------- Footer HTML code here ----------------------->
+    </div>
 <?php include("footer.php"); ?>

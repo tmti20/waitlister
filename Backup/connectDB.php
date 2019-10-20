@@ -3,7 +3,7 @@
 error_reporting(E_ERROR | E_Warning | E_PARSE | E_NOTICE);
 ini_set( 'display_errors', 1);
 
-include ("account.php");
+include("account.php");
 
 //CONNECT to MySQL
 $db = mysqli_connect($hostname,$username, $password ,$project);

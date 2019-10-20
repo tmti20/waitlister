@@ -12,7 +12,7 @@ ini_set('display_errors' , 1);
 
 //include (  "hwfunctions.php"  ) ; #including the file name
 
-include (  "account.php"     ) ;
+include("account.php");
 $db = mysqli_connect($hostname,$username, $password ,$project);
 if (mysqli_connect_errno())
   {

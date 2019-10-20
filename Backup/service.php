@@ -1,20 +1,20 @@
 <?php
 include("header.php");
-include ( "connectDB.php") ;
+include("connectDB.php");
 ?>
 
 <form action ="function.php">
 
 <!-- MENU PHP CALL-->
 <br><br><b>Please Select Location&nbsp &nbsp: </b>
-<?php  include ( "location.php") ;  ?>
+<?php  include("location.php");  ?>
 
 <!--TRANSACTION CHOICE OPTIONS-->
 <br><br><b>Please Select Store&nbsp &nbsp: </b>
-<?php  include ( "store.php") ;  ?>
+<?php  include("store.php");  ?>
 
 <br><br><b>Please Select Barber&nbsp &nbsp: </b>
-<?php  include ( "barber.php") ;  ?>
+<?php  include("barber.php");  ?>
 
 <!--<select name= "choice" id = "choice">-->
 <!--  <option value="nothing"> Please Select</option>-->

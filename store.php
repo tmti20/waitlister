@@ -1,5 +1,12 @@
+<!----------------------- Header HTML code here ----------------------->
+<?php include("header.php"); ?>
+<span class="login100-form-title p-b-34 p-t-27">
+    Chose a store
+</span>
+
+<!------------------- php code starts here ------------------->
 <?php
-include ( "connectDB.php") ;
+include("DB/connectDB.php");
 //MENU.PHP
 
 $location = "Paterson";
@@ -15,9 +22,15 @@ while ($r = mysqli_fetch_array($t,MYSQLI_ASSOC)){
     echo "<option value = \"$store\">";
     echo  "$store ";
     echo "</option>";
+    echo "<br>";
 }
 
 //End Option Wrapper
 echo "</select>";
-//End Menu Wrapper
+
 ?>
+
+<!------------------- php code End here ------------------->
+
+<!----------------------- Footer HTML code here ----------------------->
+<?php include("footer.php"); ?>
