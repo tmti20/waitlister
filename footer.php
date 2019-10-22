@@ -1,10 +1,6 @@
 </div>
 
-<div class="text-center p-t-90">
-    <a class="txt1" href="#">
-        Not Registered Yet?
-    </a>
-</div>
+
 </form>
 </div>
 </div>

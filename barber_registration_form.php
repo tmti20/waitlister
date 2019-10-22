@@ -58,6 +58,7 @@ $storeneme = "Paterson";
                     <button class="login100-form-btn">
                         Add Barber
                     </button>
+                    <a class="login100-form-btn" href="Dash/dashboard.html" role="button">Back Dashboard</a><br>
                 </div>
 
                 <div class="text-center p-t-90">

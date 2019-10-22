@@ -7,9 +7,9 @@
 <?php
 include ("DB/connectDB.php");
 
-$storename = $_POST["storename"];
-$city = $_POST[ "city" ];
-$zip = $_POST[ "zip" ];
+$storename = filter_input(INPUT_POST, 'storename', FILTER_SANITIZE_STRING);
+$city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
+$zip = filter_input(INPUT_POST, 'zip');
 
 
 $sql_insert = "insert into wt_store (storename, city, zip) values ('$storename','$city','$zip')";

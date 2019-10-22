@@ -32,7 +32,7 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" action="login.php">
+            <form class="login100-form validate-form" method="post" action="login.php">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
@@ -65,13 +65,13 @@
 
                     <button class="login100-form-btn">
 
-                        Sign Up
+                        Login
                     </button>
                 </div>
 
                 <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
-                        Already have account? Click Here
+                    <a class="txt1" href="registration_form.php">
+                        Not Registered Yet? Click Here
                     </a>
                 </div>
             </form>

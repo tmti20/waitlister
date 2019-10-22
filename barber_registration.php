@@ -8,8 +8,8 @@
 <?php
 include ("DB/connectDB.php");
 
-$barbername = $_POST["barbername"];
-$storename = $_POST[ "storename" ];
+$barbername = filter_input(INPUT_POST, 'barbername', FILTER_SANITIZE_STRING);
+$storename = filter_input(INPUT_POST, 'storename', FILTER_SANITIZE_STRING);
 //$zip = $_POST[ "zip" ];
 
 

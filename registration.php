@@ -7,10 +7,9 @@
 <?php
 include ("DB/connectDB.php");
 
-$user = $_POST["username"];
-$email = $_POST[ "email" ];
-$pass = $_POST[ "password" ];
-$delay = 5;
+$user = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+$pass = filter_input(INPUT_POST, 'password' );
 
 //echo "<br><b>delay :</b> $delay secs";
 

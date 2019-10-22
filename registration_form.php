@@ -79,8 +79,8 @@
                 </div>
 
                 <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
-                        Already have account? Click Here
+                    <a class="txt1" href="login_form.php">
+                        Already have account? Login Here
                     </a>
                 </div>
 
