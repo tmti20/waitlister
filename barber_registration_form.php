@@ -1,3 +1,7 @@
+<?php
+$storeneme = "Paterson";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,56 +36,27 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" method="post" action="store_registration.php">
+            <form class="login100-form validate-form" method="post" action="barber_registration.php">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscapes">WL</i>
 					</span>
 
                 <span class="login100-form-title p-b-34 p-t-27">
-						Register Your Business
+						Barber Registration
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                    <input class="input100" type="text" name="storename" placeholder="Store Name">
+                    <input class="input100" type="text" name="barbername" placeholder="Barber Name">
+                    <input class="input100" type="hidden" name="storename" value="<?php echo $storeneme ?>" >
 
 <!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate = "City">
-                    <input class="input100" type="text" name="city" placeholder="City">
-
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Zip">
-                    <input class="input100" type="number" name="zip" placeholder="Zip Code">
-
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
-                </div>
-
-
-<!--                <div class="wrap-input100 validate-input" data-validate="Enter password">-->
-<!--                    <input class="input100" type="password" name="password" id="password" placeholder="Password">-->
-<!--                    <span class="focus-input100" data-placeholder="&#xf191;"></span>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="wrap-input100 validate-input" data-validate="Confirm password">-->
-<!--                    <input class="input100" type="password" name="password" id="confirm_password" placeholder="Confirm Password">-->
-<!---->
-<!--                    <span class="focus-input100" data-placeholder="&#xf191;"></span>-->
-<!--                </div>-->
-
-                <div class="contact100-form-checkbox">
-                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                    <label class="label-checkbox100" for="ckb1">
-                        Remember me
-                    </label>
-                </div>
 
                 <div class="container-login100-form-btn">
 
                     <button class="login100-form-btn">
-                        Sign Up
+                        Add Barber
                     </button>
                 </div>
 
