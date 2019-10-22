@@ -31,7 +31,7 @@ if ($num == 0){
 else
     echo " <br><br><h2>Welcome to Waitlister.<h2><br><br>
  <div class=\"container-login100-form-btn\">
-    <a class=\"login100-form-btn\" href=\"location.php\" role=\"button\">Order Here</a><br><br>
+    <a class=\"login100-form-btn\" href=\"location.php?user=$user\" role=\"button\">Order Here</a><br><br>
 </div>
 
 <div class=\"text-center p-t-90\">

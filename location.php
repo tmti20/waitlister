@@ -45,14 +45,10 @@
 
                 <div class="container-login100-form-btn">
 
-
-
-
-
 <?php
 include("DB/connectDB.php");
 //MENU.PHP
-
+$user = $_GET["user"];
 
 $s = "select distinct city from wt_store " ;
 ($t = mysqli_query($db, $s)) or die(mysqli_error($db));
@@ -68,45 +64,28 @@ while ($r = mysqli_fetch_array($t,MYSQLI_ASSOC)){
     echo "</option>";
     echo "<br>";
 }
-//
+
 ////End Option Wrapper
 echo "</select>";
-//
-//?>
 
+?>
 
-                </div>
+<form class="login100-form validate-form" action="#">
 
-                <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
-                        Not Register Yet?
-                    </a>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="container-login100-form-btn">
+
+    <button class="login100-form-btn">
+        Don't Click
+    </button>
+</div>
+</form>
+<br><br>
+<div class="text-center p-t-90">
+    <a class="txt1" href="store.php?user=<?php echo $user ?>&location=<?php echo $location ?>">
+        Next
+    </a>
 </div>
 
 
-<div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/daterangepicker/moment.min.js"></script>
-<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
-
-</body>
-</html>
-
+                    <!----------------------- Footer HTML code here ----------------------->
+<?php include("footer.php"); ?>
