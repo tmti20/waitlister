@@ -41,7 +41,7 @@ echo "Hair Cut style: $service <br>";
 </form>
 
 <div class="text-center p-t-90">
-    <a class="txt1" href="service.php?user=<?php echo $user ?>&location=<?php echo $location ?>&store=<?php echo $store ?>&barber=<?php echo $barber ?>">
+    <a class="txt1" href="order_confirm.php?user=<?php echo $user ?>&location=<?php echo $location ?>&store=<?php echo $store ?>&barber=<?php echo $barber ?>&service=<?php echo $service ?>">
         CONFIRM ORDER
     </a>
 </div>
