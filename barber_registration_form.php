@@ -1,5 +1,5 @@
 <?php
-$storeneme = "Paterson";
+$storeneme = $_GET["storename"];
 ?>
 
 <!DOCTYPE html>
@@ -62,8 +62,8 @@ $storeneme = "Paterson";
                 </div>
 
                 <div class="text-center p-t-90">
-                    <a class="txt1" href="#">
-                        Already have account? Click Here
+                    <a class="txt1" href="store_login_form.php">
+                        LOGOUT
                     </a>
                 </div>
 

@@ -60,11 +60,11 @@
                     echo "<select  name=\"service\" >";
                     //OPTIONS
                     while ($r = mysqli_fetch_array($t,MYSQLI_ASSOC)){
-                        $style = $r["style"];
+                        $service = $r["style"];
                         $price = $r ["price"];
 
-                        echo "<option value = \"$style\">";
-                        echo  "$style : ";
+                        echo "<option value = \"$service\">";
+                        echo  "$service : ";
                         echo  " $$price ";
                         echo "</option>";
                         echo "<br>";
@@ -86,7 +86,7 @@
                     </form>
                     <br><br>
                     <div class="text-center p-t-90">
-                        <a class="txt1" href="barber.php?user=<?php echo $user ?>&location=<?php echo $location ?>&location=<?php echo $store ?>&service=<?php echo $style ?>&style=<?php echo $style ?>">
+                        <a class="txt1" href="order_review.php?user=<?php echo $user ?>&location=<?php echo $location ?>&store=<?php echo $store ?>&barber=<?php echo $barber ?>&service=<?php echo $service ?>">
                             Next
                         </a>
                     </div>
