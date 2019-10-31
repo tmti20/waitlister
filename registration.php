@@ -1,10 +1,7 @@
 <?php include ("header.php");?>
-<?php
-   session_set_cookie_params ( 0, "/~mj342/");
-   session_start();
-?>
 
 <?php
+session_start();
 include ("DB/connectDB.php");
 
 $user = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
@@ -14,11 +11,16 @@ $pass = filter_input(INPUT_POST, 'password' );
 //echo "<br><b>delay :</b> $delay secs";
 
   $sql_insert = "insert into wt_registration (username, userpass, email) values ('$user','$pass','$email' )";
-  echo "<br> SQL statement: $sql_insert<br>";
 
-  echo "<br> $user<br>";
-  echo "$email<br>";
-  echo "$pass<br>";
+  echo "
+  <span class=\"login100-form-title p-b-34 p-t-27\">
+        <br><h1> WELCOME $user</h1><br>
+    </span>";
+
+  echo "<br>Registration Successful. Please Log in !<br><br>
+<div class=\"container-login100-form-btn\">
+    <br><a class=\"login100-form-btn\" href=\"login_form.php\">LOG IN</a><br><br>
+</div>";
   
   $t1 = mysqli_query( $db,  $sql_insert )  or die( mysqli_error($db) ); #executes the sql statement
 

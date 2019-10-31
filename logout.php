@@ -1,8 +1,8 @@
 <?php include ("header.php");?>
-<?php
-echo "<h1>Thank You for using our app.<h1>";
-?>
 
+<span class="login100-form-title p-b-34 p-t-27">
+    Thank You for using our app.
+</span>
 
 <br><br>
 

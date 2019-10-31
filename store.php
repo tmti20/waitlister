@@ -1,61 +1,25 @@
-<!----------------------- Header HTML code here ----------------------->
-<?php include("header.php"); ?>
-<span class="login100-form-title p-b-34 p-t-27">
-    Chose a store
-</span>
+<?php session_start();
 
-<!------------------- php code starts here ------------------->
-<?php
-include("DB/connectDB.php");
-//MENU.PHP
-$user = $_GET ["user"];
-$location = $_GET["location"];
-echo $location;
-
-$s = "select storename from wt_store where city = '$location' " ;
-($t = mysqli_query($db, $s)) or die(mysqli_error($db));
-
-//MENU
-echo "<select  name=\"store\">";
-//OPTIONS
-while ($r = mysqli_fetch_array($t,MYSQLI_ASSOC)){
-    $store = $r["storename"];
-
-    echo "<option value = \"$store\">";
-    echo  "$store ";
-    echo "</option>";
-    echo "<br>";
-}
-
-//End Option Wrapper
-echo "</select>";
-
+$username = $_POST['username'];
+$location = $_POST['location'];
+echo $username;
 ?>
+<form class="login100-form validate-form" method="post" action="barber.php">
 
-<!------------------- php code End here ------------------->
-
-<form  method="post" action="#">
-
-    <div >
-        <input class="input100" type="hidden" name="barbername" >
-        <input class="input100" type="hidden" name="storename" value="<?php echo $store ?>" >
-    </div>
-
-
+<?php include "header.php"; ?>
+    <span class="login100-form-title p-b-34 p-t-27">
+        Pick Your Store
+    </span>
+    <?php include("store_menu.php"); ?>
+    <input class="input100" type="text"  hidden name="username" value="<?php echo $username;?>"   >
+    <input class="input100" type="text"  hidden name="location" value="<?php echo $location;?>"   >
     <div class="container-login100-form-btn">
-
-        <button class="login100-form-btn">
-            Don't Click
-        </button>
-<!--        <a class="login100-form-btn" href="Dash/dashboard.html" role="button">Back Dashboard</a><br>-->
+    <button class="login100-form-btn" type="submit" > Next </button>
     </div>
+
+    <div class="text-center p-t-90">
+        <a class="login100-form-btn" href="logout.php">
+            LOGOUT
+        </a>
 </form>
-
-<div class="text-center p-t-90">
-    <a class="txt1" href="barber.php?user=<?php echo $user ?>&location=<?php echo $location ?>&store=<?php echo $store ?>">
-        Next
-    </a>
-</div>
-
-<!----------------------- Footer HTML code here ----------------------->
-<?php include("footer.php"); ?>
+<?php include "footer.php"; ?>

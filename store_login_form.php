@@ -32,7 +32,7 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
         <div class="wrap-login100">
-            <form class="login100-form validate-form" method="post" action="login.php">
+            <form class="login100-form validate-form" method="post" action="store_login.php">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <!--                        --><?php //include ("store.php")  ?>
+                    <!--                        --><?php //include ("store_menu.php")  ?>
 
                     <button class="login100-form-btn">
 

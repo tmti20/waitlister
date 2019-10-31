@@ -33,7 +33,7 @@
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
 				<span class="login100-form-logo">
-                    <i class="zmdi zmdi-landscape"></i>
+                    <i class="zmdi zmdi-landscapes">WL</i>
                 </span>
 
                 <span class="login100-form-title p-b-34 p-t-27">
@@ -43,7 +43,7 @@
                 <form class="login100-form validate-form" action="login_form.php">
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Customer Login
+							Client Login
 						</button>
 					</div>
 				</form>
