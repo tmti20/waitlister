@@ -32,7 +32,7 @@ while ($r = mysqli_fetch_array($t, MYSQLI_ASSOC)) {
 ////END THE MENU
 echo "</select>";
 ?>
-//NEXT BUTTON
+<!--//NEXT BUTTON-->
     <input class="input100" type="text"  hidden name="username" value="<?php echo $username;?>"   >
     <input class="input100" type="text"  hidden name="location" value="<?php echo $location;?>"   >
     <input class="input100" type="text"  hidden name="store" value="<?php echo $store;?>"   >
