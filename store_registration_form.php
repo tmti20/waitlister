@@ -43,8 +43,6 @@
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter username">
                     <input class="input100" type="text" name="storename" placeholder="Store Name">
-
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter Email">
@@ -60,14 +58,10 @@
 
                 <div class="wrap-input100 validate-input" data-validate = "City">
                     <input class="input100" type="text" name="city" placeholder="City">
-
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Zip">
                     <input class="input100" type="number" name="zip" placeholder="Zip Code">
-
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
                 </div>
 
                 <div class="contact100-form-checkbox">
@@ -89,11 +83,6 @@
                         Already have account? Click Here
                     </a>
                 </div>
-
-
-
-
-                <!--                <button type="submit" class="pure-button pure-button-primary">Confirm</button>-->
             </form>
         </div>
     </div>

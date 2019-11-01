@@ -61,10 +61,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <!--                        --><?php //include ("store_menu.php")  ?>
-
                     <button class="login100-form-btn">
-
                         Login
                     </button>
                 </div>
@@ -78,7 +75,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="dropDownSelect1"></div>
 

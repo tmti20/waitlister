@@ -83,16 +83,10 @@
                         Already have account? Login Here
                     </a>
                 </div>
-
-
-
-
-<!--                <button type="submit" class="pure-button pure-button-primary">Confirm</button>-->
             </form>
         </div>
     </div>
 </div>
-
 
 <div id="dropDownSelect1"></div>
 

@@ -49,9 +49,7 @@ $storeneme = $_GET["storename"];
                     <input class="input100" type="text" name="barbername" placeholder="Barber Name">
                     <input class="input100" type="hidden" name="storename" value="<?php echo $storeneme ?>" >
 
-<!--                    <span class="focus-input100" data-placeholder="&#xf207;"></span>-->
                 </div>
-
 
                 <div class="container-login100-form-btn">
 
@@ -66,11 +64,6 @@ $storeneme = $_GET["storename"];
                         LOGOUT
                     </a>
                 </div>
-
-
-
-
-                <!--                <button type="submit" class="pure-button pure-button-primary">Confirm</button>-->
             </form>
         </div>
     </div>
