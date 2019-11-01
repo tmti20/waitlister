@@ -74,11 +74,6 @@
                         Need to Register? Click Here
                     </a>
                 </div>
-
-
-
-
-<!--                <button type="submit" class="pure-button pure-button-primary">Confirm</button>-->
             </form>
         </div>
     </div>
