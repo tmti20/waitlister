@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION["authenticated"] = False;
 include ("header.php");
 include ("DB/connectDB.php");
 $storename = filter_input(INPUT_POST, 'storename', FILTER_SANITIZE_STRING);
@@ -7,13 +9,20 @@ $storepass = filter_input(INPUT_POST, 'storepass');
 $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
 $zip = filter_input(INPUT_POST, 'zip');
 
+$_SESSION["storename"] = $storename;
+$_SESSION["storeemail"] = $storeemail;
+$_SESSION["storepass"] = $storepass;
+$_SESSION["city"] = $city;
+$_SESSION["zip"] = $zip;
+
 $sql_insert = "insert into wt_store (storename, city, zip,storepass, storeemail) values ('$storename','$city','$zip', '$storepass', '$storeemail')";
 echo "<br> Congratulation! You have successfully register your store to Waitlister System.<br>";
 $t1 = mysqli_query( $db,  $sql_insert )  or die( mysqli_error($db) ); #executes the sql statement
+$_SESSION["authenticated"] = True;
 ?>
     <br><br>
     <div class="container-login100-form-btn">
-        <br><a class="login100-form-btn" href="barber_registration_form.php?storename=<?php echo $storename ?>" role="button">Add Barber</a><br><br>
+        <br><a class="login100-form-btn" href="barber_registration_form.php" role="button">Add Barber</a><br><br>
         <a class="login100-form-btn" href="Dash/dashboard.html" role="button">Dashboard</a><br>
     </div>
 <!--LOGOUT BUTTON-->

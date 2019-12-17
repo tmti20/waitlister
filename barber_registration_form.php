@@ -1,5 +1,14 @@
 <?php
-$storeneme = $_GET["storename"];
+session_start();
+if ( ! $_SESSION["authenticated"])
+{
+	header("Location: waitlister.php");	
+}
+//connect database with this connectDB.php file
+include ("DB/connectDB.php");
+//$storename = $_GET["storename"];
+$storeemail = $_SESSION["storeemail"];
+$storename = $_SESSION["storename2"];
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +49,37 @@ $storeneme = $_GET["storename"];
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscapes">WL</i>
 					</span>
-
-                <span class="login100-form-title p-b-34 p-t-27">
+            <span class="login100-form-title p-b-34 p-t-27">
+						Manage Barbers
+					</span>
+         <?php
+         $s = "select * from wt_barber where storename = '$storename'";
+        ($t = mysqli_query($db, $s)) or die(mysqli_error($db));
+        $num = mysqli_num_rows($t);
+        if ($num == 0) {
+            echo "You don't have Registered Barber! please Add";
+        	
+        } 
+        else { 
+            while ($r = mysqli_fetch_array($t, MYSQLI_ASSOC)) {
+                $barberid = $r["barberid"];
+                $barbername = $r["barbername"];
+        //            printing active order here
+            echo "<h5>    
+        		<br > Barber ID: $barberid
+            <br> Barber Name : $barbername ";
+//    logout button
+	echo " <br><a method = 'post' class=\"login100-form-btn\" href=\"deletebarber.php?barberid=$barberid&barbername=$barbername\">DELETE Barber</a><br></h5>";
+            }
+            }
+         ?>                                    
+                                                   
+           <span class="login100-form-title p-b-34 p-t-27">
 						Barber Registration
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter username">
                     <input class="input100" type="text" name="barbername" placeholder="Barber Name">
-                    <input class="input100" type="hidden" name="storename" value="<?php echo $storeneme ?>" >
 
                 </div>
 
@@ -56,11 +88,11 @@ $storeneme = $_GET["storename"];
                     <button class="login100-form-btn">
                         Add Barber
                     </button>
-                    <a class="login100-form-btn" href="Dash/dashboard.html" role="button">Back Dashboard</a><br>
+                    <a class="login100-form-btn" href="Dash/dashboard.php" role="button">Back Dashboard</a><br>
                 </div>
 
                 <div class="text-center p-t-90">
-                    <a class="txt1" href="store_login_form.php">
+                    <a class="login100-form-btn" href="store_login_form.php">
                         LOGOUT
                     </a>
                 </div>
